@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour - Tana</title>
-    <link rel="stylesheet" href="style2.css">
-</head>
+    <link rel="stylesheet" href="css/styleforcontactandtour.css"</head>
 <body>
     <nav>
         <ul>
@@ -18,7 +17,11 @@
     <div id="contact-page">
         <div class="album-section">
             <img src="images/Final Album Cover Noah Khan.png" alt="Album Cover" class="album-cover">
-            <button class="buy-button">Koop Nu!</button>
+            <a href="Tour.html">
+                <button class="buy-button">Koop Nu!</button>
+            </a>
+            
+            
         </div>
 
         <div class="contact-section">
@@ -26,32 +29,45 @@
             <h2>Nederland 2024</h2>
             <br>
             <form class="contact-form">
+                <label for="naam">Naam:</label>
+                <input type="text" id="naam" placeholder="Vul je naam in" required>
+                
+                <label for="adres">Adres:</label>
+                <input type="text" id="adres" placeholder="Vul je adres in" required>
+                
                 <label for="tour-selection">Kies je Datum:</label>
                 <div id="tour-selection">
-                
-                    
                     <label>
                         <input type="radio" name="tour" value="Zwolle 11-06-24 - €30"> Zwolle 11-06-24 - €30
                     </label>
-                    <br>
-                    <br>
+                    <br><br>
                     <label>
                         <input type="radio" name="tour" value="Delft 14-06-24 - €30"> Delft 14-06-24 - €30
                     </label>
-                    <br>
-                    <br>
+                    <br><br>
                     <label>
                         <input type="radio" name="tour" value="Haarlem 20-06-24 - €30"> Haarlem 20-06-24 - €30
                     </label>
-                    <br>
-                    <br>
+                    <br><br>
                     <label>
                         <input type="radio" name="tour" value="Amersfoort 22-06-24 - €30"> Amersfoort 22-06-24 - €30
                     </label>
+                    <br><br>
+                    <label>
+                        <input type="checkbox" name="album" value="Album"> Album (€15)
+                    </label>
+                    
                 </div>
-                <button type="submit" class="order-button">Bestel je tickets</button>
+                
+                <button type="button" class="order-button" onclick="bestelBestelling()">Bestel je tickets <br>
+
+                    <h5>PS: 10% korting bij ticket + album combinatie</button></h5>
             </form>
+            <div id="bestelling-details"></div>
+
         </div>
     </div>
+    <script src="/Tana-Website/Javascript/order.js"></script>
+
 </body>
 </html>
